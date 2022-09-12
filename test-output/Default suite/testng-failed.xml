@@ -3,18 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testng.TestNG001.TestCase">
+      <class name="TestCase.TestCase">
         <methods>
-          <include name="createAnAccount"/>
-          <include name="tc3"/>
-          <include name="aftersuite"/>
-          <include name="beforetest"/>
-          <include name="beforeclass"/>
-          <include name="beforesuite"/>
-          <include name="beforemethod"/>
-          <include name="aftermethod"/>
+          <include name="bookAHotel"/>
+          <include name="printOrderNo"/>
+          <include name="timeStamp01"/>
+          <include name="driverIni"/>
+          <include name="login"/>
+          <include name="searchHotel"/>
+          <include name="selectHotel"/>
+          <include name="timeStamp"/>
+          <include name="driverClose"/>
         </methods>
-      </class> <!-- com.testng.TestNG001.TestCase -->
+      </class> <!-- TestCase.TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

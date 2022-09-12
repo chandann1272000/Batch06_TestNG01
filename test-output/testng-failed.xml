@@ -5,11 +5,13 @@
     <classes>
       <class name="TestCase.TestCase">
         <methods>
+          <include name="bookAHotel"/>
           <include name="printOrderNo"/>
           <include name="timeStamp01"/>
           <include name="driverIni"/>
           <include name="login"/>
           <include name="timeStamp"/>
+          <include name="driverClose"/>
         </methods>
       </class> <!-- TestCase.TestCase -->
     </classes>

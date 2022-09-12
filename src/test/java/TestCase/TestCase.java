@@ -1,13 +1,19 @@
 package TestCase;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import utilities.ReadXL;
 
 public class TestCase extends Base{
+	
+	
+	ReadXL rxl=new ReadXL();
 	@Test(priority = 0)
 	public void searchHotel() {
 		WebElement loc=driver.findElement(By.id("location"));
@@ -28,8 +34,9 @@ public class TestCase extends Base{
 	}
 	
 	@Test(priority = 2)
-	private void bookAHotel() {
-		driver.findElement(By.id("first_name")).sendKeys("Chandan");
+	private void bookAHotel() throws IOException {
+		System.out.println(rxl.readExcelSheet());
+		driver.findElement(By.id("first_name")).sendKeys(rxl.readExcelSheet());
 		driver.findElement(By.name("last_name")).sendKeys("N");
 		driver.findElement(By.xpath(".//textarea[@rows='4']")).sendKeys("abcd");
 		driver.findElement(By.xpath(".//input[@id='cc_num']")).sendKeys("1234567891234567");
